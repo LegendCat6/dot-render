@@ -27,6 +27,7 @@ end, {})
 
 -- DotSave Function
 vim.api.nvim_create_user_command('DotSave', function()
+  vim.cmd('write')
   local input = vim.fn.expand('%')
   local output = vim.fn.expand('%:r') .. '.svg'
 
